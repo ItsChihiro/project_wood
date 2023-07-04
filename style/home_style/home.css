@@ -85,14 +85,12 @@ body {
   max-width: 1188px;
   width: 100%;
   min-height: 927px;
-  margin: 0 auto 305px auto;
-  display: flex;
-  justify-content: center;
+  margin: 0 auto 15% auto;
 }
 .block-advantages__title-wrapper {
   max-width: 1040px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 10% 0 15%;
 }
 @media (max-width: 992px) {
   .block-advantages__title-wrapper {
@@ -106,7 +104,6 @@ body {
 }
 @media (max-width: 992px) {
   .block-advantages__title-wrapper .block-advantages__title {
-    margin-bottom: 0;
     font-size: 60px;
   }
 }
@@ -172,9 +169,9 @@ body {
 }
 .block-advantages__btn-wrapper button {
   max-width: 33%;
+  width: 100%;
   padding: 1% 0 1% 0;
   font-size: 1.5rem;
-  width: 100%;
 }
 
 .block-about {
@@ -183,7 +180,7 @@ body {
   max-width: 1325px;
   width: 100%;
   min-height: 775px;
-  margin: 0 10vw 0 0;
+  margin: 0 10vw 15% 0;
   box-shadow: 0px -8px 52px 0px rgba(238, 238, 238, 0.17);
 }
 
@@ -212,8 +209,7 @@ body {
   font-weight: bold;
 }
 .main__container .main__content {
-  margin-top: 10%;
-  margin-bottom: 5%;
+  margin: 10% 4.5% 5% 0;
 }
 .main__container .main__content img {
   max-width: 100%;

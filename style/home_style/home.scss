@@ -11,7 +11,7 @@ $l:405px;
     color: #F5F5F5;
     font-size: 90px;
     text-transform: uppercase;
-
+    // перекрыла временно марджины из normilize.css
     margin: 0;
 }
 
@@ -59,20 +59,20 @@ body{
 .button{
     @extend %button
 }
+
+
+// BLOCK ADVANTAGES
+
 .block-advantages{
     background-color: #222021;
     max-width: 1188px;
     width: 100%;
     min-height: 927px;
-    margin: 0 auto 305px auto;
-    
-    display: flex;
-    justify-content:center;
+    margin: 0 auto 15% auto;
     &__title-wrapper{
         max-width: 1040px;
         width: 100%;
-        
-        margin: 0 auto;
+        margin: 0 10% 0 15%;
         @media (max-width: $xl){
             max-width: 639px;
         }
@@ -80,16 +80,12 @@ body{
             max-width: 305px;
         }
         .block-advantages__title{
-            // margin-bottom: 121px;
             @media (max-width:$xl){
-                margin-bottom: 0;
                 font-size: 60px;
             }
             @media (max-width: $l){
                 font-size: 30px;
-                
             }
-            
         }
     }
 
@@ -124,7 +120,6 @@ body{
                 display: flex;
                 flex-direction: column;
                 row-gap: 46px;
-                // margin-left: 121px;
                 @media (max-width:$xl){
                     margin-left: 0;
                     margin-bottom: 60px;
@@ -143,18 +138,17 @@ body{
         display: flex;
         justify-content: center;
         button{
-            // padding: 11px 70px;
-            // max-width: 472px;
             max-width: 33%;
+            width: 100%;
             padding: 1% 0 1% 0;
             font-size: 1.5rem;
-            width: 100%;
         }
     }
 }
 
 
 
+// BLOCK ABOUT US
 
 .block-about{
     border-radius: 0px 42px 42px 0px;
@@ -162,7 +156,7 @@ body{
     max-width: 1325px;
     width: 100%;
     min-height: 775px;
-    margin: 0 10vw 0 0;
+    margin: 0 10vw 15% 0;
     box-shadow: 0px -8px 52px 0px rgba(238, 238, 238, 0.17);
 }
 
@@ -199,13 +193,10 @@ body{
         img{
             max-width: 100%;
         }
-        margin-top: 10%;
-        margin-bottom: 5%;
+        margin: 10% 4.5% 5% 0;
         @media (max-width:$xl){
             margin-left: 22%;
             margin-right: 5%;
         }
-        // display: flex;
-        // flex-direction: column;
     }
 }
