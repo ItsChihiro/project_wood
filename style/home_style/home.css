@@ -1,0 +1,226 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-package/Regular.eot");
+  src: url("../assets/fonts/Inter-package/Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Inter-package/Inter Regular.woff2") format("woff2"), url("../assets/fonts/Inter-package/Inter Regular.woff") format("woff"), url("../assets/fonts/Inter-package/Inter Regular.ttf") format("truetype"), url("../assets/fonts/Inter-package/Inter Regular.svg#Inter Regular") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-E0D0;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-package/Inter Bold.eot");
+  src: url("../assets/fonts/Inter-package/Inter Bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Inter-package/Inter Bold.woff2") format("woff2"), url("../assets/fonts/Inter-package/Inter Bold.woff") format("woff"), url("../assets/fonts/Inter-package/Inter Bold.ttf") format("truetype"), url("../assets/fonts/Inter-package/Inter Bold.svg#Inter Bold") format("svg");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-E0D0;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat-package/Bold.eot");
+  src: url("../assets/fonts/Montserrat-package/Montserrat Bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Montserrat-package/Montserrat Bold.woff2") format("woff2"), url("../assets/fonts/Montserrat-package/Montserrat Bold.woff") format("woff"), url("../assets/fonts/Montserrat-package/Montserrat Bold.ttf") format("truetype"), url("../assets/fonts/Montserrat-package/Montserrat Bold.svg#Montserrat Bold") format("svg");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2044;
+}
+@font-face {
+  font-family: "Playfair Display Medium";
+  src: url("../assets/fonts/Playfair_Display-package/Display Medium.eot");
+  src: url("../assets/fonts/Playfair_Display-package/Playfair Display Medium.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Playfair_Display-package/Playfair Display Medium.woff2") format("woff2"), url("../assets/fonts/Playfair_Display-package/Playfair Display Medium.woff") format("woff"), url("../assets/fonts/Playfair_Display-package/Playfair Display Medium.svg#Playfair Display Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2212;
+}
+.title {
+  font-family: "Playfair Display Medium";
+  font-weight: 600;
+  color: #F5F5F5;
+  font-size: 90px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.text {
+  font-family: "Inter";
+  font-weight: 300;
+  color: #F5F5F5;
+  font-size: 30px;
+}
+
+.button {
+  border-radius: 42px;
+  background-color: #728BAD;
+  color: #F5F5F5;
+  font-size: 30px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #222021;
+  background-image: url(/assets/img/template/rings.png);
+  background-size: cover;
+  background-color: rgb(33, 33, 33);
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.block-advantages {
+  background-color: #222021;
+  max-width: 1188px;
+  width: 100%;
+  min-height: 927px;
+  margin: 0 auto 305px auto;
+  display: flex;
+  justify-content: center;
+}
+.block-advantages__title-wrapper {
+  max-width: 1040px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 992px) {
+  .block-advantages__title-wrapper {
+    max-width: 639px;
+  }
+}
+@media (max-width: 405px) {
+  .block-advantages__title-wrapper {
+    max-width: 305px;
+  }
+}
+@media (max-width: 992px) {
+  .block-advantages__title-wrapper .block-advantages__title {
+    margin-bottom: 0;
+    font-size: 60px;
+  }
+}
+@media (max-width: 405px) {
+  .block-advantages__title-wrapper .block-advantages__title {
+    font-size: 30px;
+  }
+}
+.block-advantages .block-advantages__main {
+  display: flex;
+  flex-direction: column;
+  gap: 121px;
+}
+@media (max-width: 992px) {
+  .block-advantages .block-advantages__main {
+    gap: 60px;
+  }
+}
+@media (max-width: 405px) {
+  .block-advantages .block-advantages__main {
+    gap: 46px;
+  }
+}
+.block-advantages .block-advantages__main .wrapper-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 992px) {
+  .block-advantages .block-advantages__main .wrapper-main {
+    flex-direction: column-reverse;
+  }
+}
+.block-advantages .block-advantages__main .wrapper-main .main__img-wrapper img {
+  max-width: 609px;
+  width: 100%;
+}
+.block-advantages .block-advantages__main .wrapper-main .main__text {
+  max-width: 453px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 46px;
+}
+@media (max-width: 992px) {
+  .block-advantages .block-advantages__main .wrapper-main .main__text {
+    margin-left: 0;
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 405px) {
+  .block-advantages .block-advantages__main .wrapper-main .main__text {
+    max-width: 320px;
+    font-size: 15px;
+    gap: 11px;
+    margin-bottom: 46px;
+  }
+}
+.block-advantages__btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.block-advantages__btn-wrapper button {
+  max-width: 33%;
+  padding: 1% 0 1% 0;
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.block-about {
+  border-radius: 0px 42px 42px 0px;
+  background-color: #1E0C06;
+  max-width: 1325px;
+  width: 100%;
+  min-height: 775px;
+  margin: 0 10vw 0 0;
+  box-shadow: 0px -8px 52px 0px rgba(238, 238, 238, 0.17);
+}
+
+.main__container {
+  display: flex;
+  gap: 62px;
+}
+@media (max-width: 992px) {
+  .main__container {
+    flex-direction: column;
+    gap: 46px;
+  }
+}
+.main__container .main__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 67px;
+  max-width: 516px;
+  margin-top: 12%;
+  margin-left: 20%;
+}
+.main__container .main__text-wrapper .main__text {
+  align-self: center;
+}
+.main__container .main__text-wrapper .main__text .main__text-span {
+  font-weight: bold;
+}
+.main__container .main__content {
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+.main__container .main__content img {
+  max-width: 100%;
+}
+@media (max-width: 992px) {
+  .main__container .main__content {
+    margin-left: 22%;
+    margin-right: 5%;
+  }
+}/*# sourceMappingURL=home.css.map */
