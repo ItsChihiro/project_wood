@@ -1,0 +1,60 @@
+//Темплейты Марьям
+
+$xxl: 1440px;
+$xl: 992px;
+$l: 405px;
+
+$mobile: "screen and (max-width: 599px)";
+$tablet: "screen and (min-width: 600px) and (max-width: 1023px)";
+$desktop: "screen and (min-width: 1024px)";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #222021;
+}
+
+%title {
+    font-family: "Playfair Display Medium";
+    font-weight: 500;
+    line-height: 132.9%;
+    color: #f5f5f5;
+    font-size: 90px;
+    text-transform: uppercase;
+    // перекрыла временно марджины из normilize.css
+    margin: 0;
+}
+
+%text {
+    font-family: "Inter";
+    font-weight: 500;
+    color: #f5f5f5;
+    font-size: 30px;
+    line-height: 139.4%;
+}
+
+%elements-text {
+    font-family:'Montserrat';
+    font-weight: 700;
+    color: #F5F5F5;
+    font-style: normal;
+    line-height: 139.4%;
+}
+
+%button {
+    border-radius: 42px;
+    background-color: #728bad;
+    color: #f5f5f5;
+    font-size: 30px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+}

@@ -1,164 +1,68 @@
 @import "../fonts";
 @import "../template";
 
-$xxl: 1440px;
-$xl: 992px;
-$l: 405px;
+// body{
+//   background: #222021;
+// }
 
-$mobile: "screen and (max-width: 599px)";
-$tablet: "screen and (min-width: 600px) and (max-width: 1023px)";
-$desktop: "screen and (min-width: 1024px)";
+.title {
+  @extend %title;
 
-.container {
-  max-width: 1440px;
-  margin: 0 auto;
-  background-color: #222021;
-  background-image: url(/assets/img/template/rings.png);
-  background-size: cover;
-  background-color: rgba(33, 33, 33);
-}
-
-.test {
-  @media #{$desktop} {
-    display: block;
-    color: #1e0c06;
+  @media #{$tablet} {
+    font-size: 60px;
+  }
+  @media #{$mobile} {
+    font-size: 30px;
   }
 }
 
-%title {
-  font-family: "Playfair Display Medium";
-  font-weight: 500;
-  line-height: 132.9%;
-  color: #f5f5f5;
-  font-size: 90px;
-  text-transform: uppercase;
-  // перекрыла временно марджины из normilize.css
-  margin: 0;
-}
-
-%text {
-  font-family: "Inter";
-  font-weight: 300;
-  color: #f5f5f5;
-  font-size: 30px;
-  line-height: 139.4%;
-}
-
-%button {
-  border-radius: 42px;
-  background-color: #728bad;
-  color: #f5f5f5;
-  font-size: 30px;
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  cursor: pointer;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-}
-.container {
-  width: 100%;
-  margin: 0 auto;
-}
-.title {
-  @extend %title;
-}
 .text {
   @extend %text;
+
+  @media #{$tablet} {
+    margin-bottom: 60px;
+  }
+  @media #{$mobile} {
+    font-size: 15px;
+  }
 }
+
 .button {
   @extend %button;
 }
 
 // BLOCK ADVANTAGES
 
-.block-advantages {
+.advantages {
   background-color: #222021;
   max-width: 1188px;
   width: 100%;
   min-height: 927px;
   margin: 0 auto 15% auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 121px;
+
   &__title-wrapper {
     max-width: 1040px;
     width: 100%;
     margin: 0 10% 0 15%;
-    @media (max-width: $xl) {
+
+    @media #{$tablet} {
       max-width: 639px;
-    }
-    @media (max-width: $l) {
-      max-width: 305px;
-    }
-    .block-advantages__title {
-      @media (max-width: $xl) {
-        font-size: 60px;
-      }
-      @media (max-width: $l) {
-        font-size: 30px;
-      }
-    }
-  }
-
-  .block-advantages__main {
-    display: flex;
-    flex-direction: column;
-    gap: 121px;
-
-    @media (max-width: $xl) {
       gap: 60px;
     }
-
-    @media (max-width: $l) {
+    @media #{$mobile} {
+      max-width: 305px;
       gap: 46px;
-    }
-
-    .wrapper-main {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      @media (max-width: $xl) {
-        flex-direction: column-reverse;
-      }
-
-      .main__img-wrapper {
-        img {
-          max-width: 609px;
-          width: 100%;
-        }
-      }
-
-      .main__text {
-        max-width: 453px;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        row-gap: 46px;
-        @media (max-width: $xl) {
-          margin-left: 0;
-          margin-bottom: 60px;
-        }
-        @media (max-width: $l) {
-          max-width: 320px;
-          font-size: 15px;
-          gap: 11px;
-          margin-bottom: 46px;
-        }
-      }
     }
   }
 
   &__btn-wrapper {
     display: flex;
     justify-content: center;
+
     button {
       max-width: 33%;
       width: 100%;
@@ -168,14 +72,53 @@ body {
   }
 }
 
-// BLOCK ABOUT US
 
-.title {
-  @extend %title;
+.advantages-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 32px;
+
+  @media #{$tablet} {
+    flex-direction: column-reverse;
+  }
+
+  &__img-wrapper {
+
+    @media #{$mobile} {
+      margin: 0 15px 0 15px;
+  }
+
+    img {
+      max-width: 609px;
+      width: 100%;
+    }
+  }
+
+  &__text {
+    max-width: 453px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 46px;
+
+    @media #{$tablet} {
+      margin-left: 0;
+      // margin-bottom: 60px;
+    }
+    @media #{$mobile} {
+      max-width: 320px;
+      font-size: 15px;
+      gap: 11px;
+      margin-bottom: 46px;
+    }
+  }
 }
-.text {
-  @extend %text;
-}
+
+
+// BLOCK ABOUT US
 
 .about {
   border-radius: 0px 42px 42px 0px;
@@ -187,6 +130,12 @@ body {
   box-shadow: 0px -8px 52px 0px rgba(238, 238, 238, 0.17);
 
   display: flex;
+  margin-bottom: 200px;
+
+  @media screen and (max-width: 1210px) {
+    flex-direction: column;
+    gap: 46px;
+  }
 
   @media #{$tablet} {
     flex-direction: column;
@@ -199,26 +148,48 @@ body {
   }
 }
 
+
 .about-arcticle {
-  margin-left: 212px;
+  max-width: 516px;
+  // margin-left: 212px;
+  margin-left: 16%;
   margin-top: 12px;
   display: flex;
   flex-direction: column;
   gap: 67px;
 
-  max-width: 516px;
+  @media #{$tablet} {
+    max-width: 420px;
+    margin-left: 34px;
+    gap: 46px;
+  }
+
+  @media #{$mobile} {
+    max-width: 283px;
+    margin-left: 17px;
+    gap: 36px;
+  }
+
   &__text {
     height: 294px;
     display: flex;
     align-items: center;
+
+    @media #{$mobile} {
+      height: 126px;
+    }
   }
-
-
 }
 
-.about-arcticle-title {
+
+.about-arcticle__title {
   height: 120px;
+
+  @media #{$mobile} {
+    height: 40px;
+  }
 }
+
 
 .about-pictures {
   position: relative;
@@ -239,7 +210,6 @@ body {
     border-radius: 42px;
     background-color: #1e0c06;
   }
-
 
   &__img2 {
     position: absolute;
@@ -264,7 +234,11 @@ body {
   font-weight: bold;
 }
 
-
 .empty-footer {
   height: 200px;
+}
+
+// ?
+img{
+  max-width: 100%;
 }
