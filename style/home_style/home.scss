@@ -1,9 +1,17 @@
 @import "../fonts";
 @import "../template";
 
-// body{
-//   background: #222021;
-// }
+body{
+  background: #222021;
+  // overflow-x: hidden;
+}
+
+div{
+  border: solid 1px red;
+}
+// p{
+  //   border: solid 1px red;
+  // }
 
 .title {
   @extend %title;
@@ -38,24 +46,41 @@
   max-width: 1188px;
   width: 100%;
   min-height: 927px;
-  margin: 0 auto 15% auto;
+  margin: 0 auto;
+  //отступ для следующего блока
+  margin-bottom: 300px;
 
   display: flex;
   flex-direction: column;
   gap: 121px;
 
+  @media #{$tablet} {
+    max-width: 639px;
+    gap: 60px;
+    //отступ для следующего блока
+    margin-bottom: 150px;
+  }
+  @media #{$mobile} {
+    max-width: 305px;
+    min-height: 599px;
+    gap: 46px;
+    //отступ для следующего блока
+    margin-bottom: 70px;
+  }
+
   &__title-wrapper {
     max-width: 1040px;
     width: 100%;
-    margin: 0 10% 0 15%;
+    display: flex;
+    // margin: 0 10% 0 15%;
+    margin: 0 0 0 auto;
 
     @media #{$tablet} {
       max-width: 639px;
-      gap: 60px;
     }
     @media #{$mobile} {
       max-width: 305px;
-      gap: 46px;
+      padding: 0 9px;
     }
   }
 
@@ -68,6 +93,14 @@
       width: 100%;
       padding: 1% 0 1% 0;
       font-size: 1.5rem;
+
+      @media #{$tablet} {
+        max-width: 50%;
+      }
+      @media #{$mobile} {
+        max-width: 65%;
+        font-size: 15px;
+      }
     }
   }
 }
@@ -82,13 +115,18 @@
 
   @media #{$tablet} {
     flex-direction: column-reverse;
+    padding: 0 25px;
+  }
+  @media #{$mobile} {
+    flex-direction: column-reverse;
+    padding: 0 15px;
+    gap: 46px;
   }
 
   &__img-wrapper {
-
-    @media #{$mobile} {
-      margin: 0 15px 0 15px;
-  }
+    // @media #{$mobile} {
+    //   margin: 0 15px 0 15px;
+    // }
 
     img {
       max-width: 609px;
@@ -105,14 +143,25 @@
     row-gap: 46px;
 
     @media #{$tablet} {
-      margin-left: 0;
-      // margin-bottom: 60px;
+      margin: 0 auto 0 0;
+      font-size: 25px;
+      max-width: 500px;
     }
     @media #{$mobile} {
       max-width: 320px;
       font-size: 15px;
       gap: 11px;
-      margin-bottom: 46px;
+      // margin-bottom: 46px;
+    }
+  }
+
+  &__p-12 {
+    max-width: 360px;
+  }
+
+  &__p-3 {
+    @media #{$tablet} {
+      max-width: 360px;
     }
   }
 }
@@ -131,18 +180,21 @@
 
   display: flex;
   margin-bottom: 200px;
+  margin-right: 28px;
 
-  @media screen and (max-width: 1210px) {
-    flex-direction: column;
-    gap: 46px;
-  }
+  // @media screen and (max-width: 1210px) {
+  //   flex-direction: column;
+  //   gap: 46px;
+  // }
 
   @media #{$tablet} {
+    min-height: 775px;
     flex-direction: column;
     gap: 46px;
   }
-
   @media #{$mobile} {
+    max-width: 420px;
+    min-height: 674px;
     flex-direction: column;
     gap: 46px;
   }
@@ -159,11 +211,10 @@
   gap: 67px;
 
   @media #{$tablet} {
-    max-width: 420px;
+    max-width: 560px;
     margin-left: 34px;
     gap: 46px;
   }
-
   @media #{$mobile} {
     max-width: 283px;
     margin-left: 17px;
@@ -183,8 +234,12 @@
 
 
 .about-arcticle__title {
+  // border: solid 1px red;
   height: 120px;
 
+  @media #{$tablet} {
+    height: 80px;
+  }
   @media #{$mobile} {
     height: 40px;
   }
@@ -199,6 +254,15 @@
     position: absolute;
     top: 29px;
     right: 38px;
+
+    @media #{$tablet} {
+      top: 29px;
+      right: 38px;
+    }
+    @media #{$mobile} {
+      top: 29px;
+      right: 38px;
+    }
   }
 
   &__background-img2 {
