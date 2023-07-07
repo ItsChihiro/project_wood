@@ -6,13 +6,13 @@ body {
     // overflow-x: hidden;
 }
 
-div {
-    border: solid 1px red;
-}
+// div {
+//     border: solid 1px red;
+// }
 
-p {
-    border: solid 1px red;
-}
+// p {
+//     border: solid 1px red;
+// }
 
 .title {
     @extend %title;
@@ -29,18 +29,11 @@ p {
 .text {
     @extend %text;
 
-    @media #{$tablet} {
-        margin-bottom: 60px;
-    }
-
     @media #{$mobile} {
         font-size: 15px;
     }
 }
 
-.button {
-    @extend %button;
-}
 
 // BLOCK ADVANTAGES
 
@@ -76,7 +69,6 @@ p {
         max-width: 1040px;
         width: 100%;
         display: flex;
-        // margin: 0 10% 0 15%;
         margin: 0 0 0 auto;
 
         @media #{$tablet} {
@@ -93,7 +85,8 @@ p {
         display: flex;
         justify-content: center;
 
-        button {
+        .button {
+            @extend %button;
             max-width: 33%;
             width: 100%;
             padding: 1% 0 1% 0;
